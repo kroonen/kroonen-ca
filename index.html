@@ -192,8 +192,8 @@
             <button id="startBtn" aria-label="Start Simulation">Start</button>
             <button id="pauseBtn" aria-label="Pause Simulation">Pause</button>
             <button id="resetBtn" aria-label="Reset Simulation">Reset</button>
-            <input type="range" id="speedSlider" min="1" max="100" value="20" aria-label="Simulation Speed">
-            <span id="speedValue">Speed: 20%</span>
+            <input type="range" id="speedSlider" min="1" max="100" value="90" aria-label="Simulation Speed">
+            <span id="speedValue">Speed: 90%</span>
         </div>
         <div class="pattern-buttons">
             <button id="randomBtn">Random</button>
@@ -286,9 +286,10 @@
         function simulationLoop(timestamp) {
             if (isRunning) {
                 if (timestamp - lastUpdateTime > speed) {
-                    drawUniverse();
                     const changed = updateUniverse();
-                    if (!changed) {
+                    if (changed) {
+                        drawUniverse();
+                    } else {
                         pauseSimulation();
                         alert("The simulation has reached a stable state or died out.");
                     }
@@ -338,7 +339,7 @@
 
         document.getElementById('speedSlider').addEventListener('input', (e) => {
             const speedPercentage = e.target.value;
-            speed = 1000 - (speedPercentage * 9.5); // Map 1-100 to 1000-50ms
+            speed = calculateSpeed(speedPercentage);
             document.getElementById('speedValue').textContent = `Speed: ${speedPercentage}%`;
         });
 
@@ -403,6 +404,17 @@
             document.getElementById('patternName').textContent = 'Pattern: Beacon';
         });
 
+        function setInitialSpeed() {
+            const initialSpeedPercentage = document.getElementById('speedSlider').value;
+            speed = calculateSpeed(initialSpeedPercentage);
+            document.getElementById('speedValue').textContent = `Speed: ${initialSpeedPercentage}%`;
+        }
+
+        function calculateSpeed(percentage) {
+            // Map 1-100 to 500-10ms, with a logarithmic scale for finer control
+            return Math.round(500 * Math.pow(0.02, percentage / 100));
+        }
+
         function copyright() {
             const year = new Date().getFullYear();
             document.getElementById('copyright').textContent = `© ${year} Robin Kroonen`;
@@ -428,10 +440,28 @@
             resizeUniverse();
             drawUniverse();
             copyright();
+            setInitialSpeed(); // Set the initial speed based on the slider value
             document.getElementById('startBtn').disabled = true;
             document.getElementById('pauseBtn').disabled = false;
             startSimulation();
         };
+
+        function simulationLoop(timestamp) {
+            if (isRunning) {
+                if (timestamp - lastUpdateTime > speed) {
+                    const changed = updateUniverse();
+                    if (changed) {
+                        drawUniverse();
+                    } else {
+                        pauseSimulation();
+                        alert("The simulation has reached a stable state or died out.");
+                    }
+                    lastUpdateTime = timestamp;
+                }
+                requestAnimationFrame(simulationLoop);
+            }
+        }
+
     </script>
 </body>
 </html>
