@@ -50,10 +50,6 @@ This website is hosted on GitHub Pages. Any changes pushed to the main branch wi
 
 Feel free to reach out to me for collaborations, questions, or just to say hi!
 
-- GitHub: [Your GitHub Profile]
-- LinkedIn: [Your LinkedIn Profile]
-- Email: [Your Professional Email]
-
 ## License
 
 MIT
