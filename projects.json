@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Project1",
+    "image": "images/projects/Tesla-P40.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project2",
+    "image": "images/projects/bday.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project3",
+    "image": "images/projects/eclipse.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project4",
+    "image": "images/projects/gondla.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project5",
+    "image": "images/projects/llamacpp.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project6",
+    "image": "images/projects/squirrel.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project7",
+    "image": "images/projects/stargate-mini-1.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project8",
+    "image": "images/projects/victoria.JPG",
+    "description": ""
+  },
+  {
+    "title": "Project9",
+    "image": "images/projects/webUI-IoT-Pico.jpeg",
+    "description": ""
+  },
+  {
+    "title": "Project10",
+    "image": "images/projects/webUI.JPG",
+    "description": ""
+  }
+]

@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('universeCanvas');
-    const game = new GameOfLife(canvas);
-    const ui = new UI(game);
-
-    // Override the updateStats method in the game
-    game.updateStats = () => ui.updateStats();
-
-    // Initialize the UI
-    ui.initialize();
+    if (canvas) {  // Check if we're on a page with the Game of Life
+        const game = new GameOfLife(canvas);
+        const ui = new UI(game);
+        game.updateStats = () => ui.updateStats();
+        ui.initialize();
+    }
 });

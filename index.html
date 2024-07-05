@@ -12,13 +12,14 @@
     <div class="menu">
         <button class="menu-toggle">Menu</button>
         <div class="menu-items">
-            <a href="#" onclick="alert('Home')">Home</a>
+            <a href="index.html">Home</a>
             <a href="#" onclick="alert('Blog section coming soon!')">Blog</a>
-            <a href="#" onclick="alert('Projects section coming soon!')">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="https://github.com/kroonen" target="_blank">GitHub</a>
             <a href="https://huggingface.co/kroonen" target="_blank">Hugging Face</a>
         </div>
     </div>
+
     <div class="container">
         <h1>Robin Kroonen</h1>
         <div id="introduction">
@@ -33,12 +34,14 @@
             <input type="range" id="speedSlider" min="1" max="100" value="90" aria-label="Simulation Speed">
             <span id="speedValue">Speed: 90%</span>
         </div>
+
         <div class="pattern-buttons">
             <button id="randomBtn">Random</button>
             <button id="gliderBtn">Glider</button>
             <button id="blinkerBtn">Blinker</button>
             <button id="beaconBtn">Beacon</button>
         </div>
+
         <div id="patternName"></div>
         <div id="stats"></div>
         <div id="copyright"></div>
@@ -47,5 +50,6 @@
     <script src="scripts/gameOfLife.js"></script>
     <script src="scripts/ui.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/global-ui.js"></script>
 </body>
 </html>

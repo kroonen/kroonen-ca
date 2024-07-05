@@ -17,10 +17,6 @@ class UI {
 
         this.game.canvas.addEventListener('click', (event) => this.handleCanvasClick(event));
 
-        // Menu functionality
-        document.querySelector('.menu-toggle').addEventListener('click', () => this.toggleMenu());
-        document.addEventListener('click', (event) => this.closeMenuOutside(event));
-
         window.addEventListener('resize', () => this.resizeUniverse());
     }
 
@@ -97,19 +93,6 @@ class UI {
         document.getElementById('patternName').textContent = `Pattern: ${name}`;
     }
 
-    toggleMenu() {
-        document.querySelector('.menu-items').classList.toggle('active');
-    }
-
-    closeMenuOutside(event) {
-        const menu = document.querySelector('.menu');
-        const menuItems = document.querySelector('.menu-items');
-        
-        if (!menu.contains(event.target) && menuItems.classList.contains('active')) {
-            menuItems.classList.remove('active');
-        }
-    }
-
     resizeUniverse() {
         this.game.canvas.width = Math.min(800, window.innerWidth - 40);
         this.game.canvas.height = Math.min(600, window.innerHeight - 300);
@@ -128,15 +111,9 @@ class UI {
         this.setSpeed(initialSpeedPercentage);
     }
 
-    updateCopyright() {
-        const year = new Date().getFullYear();
-        document.getElementById('copyright').textContent = `© ${year} Robin Kroonen`;
-    }
-
     initialize() {
         this.resizeUniverse();
         this.game.drawUniverse();
-        this.updateCopyright();
         this.setInitialSpeed();
         document.getElementById('startBtn').disabled = true;
         document.getElementById('pauseBtn').disabled = false;
