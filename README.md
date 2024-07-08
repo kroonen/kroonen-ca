@@ -43,7 +43,7 @@ This website is hosted on GitHub Pages. Any changes pushed to the main branch wi
 
 - [ ] Add more interactive experiments in CS and AI.
 - [ ] Expand the blog with regular posts on tech trends and personal insights. (Open-WebUI)
-- [ ] Implement a project portfolio section.
+- [x] Implement a project portfolio section.
 
 ## Contact
 
