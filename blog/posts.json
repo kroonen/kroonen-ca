@@ -1,0 +1,15 @@
+[
+    {
+      "slug": "first-post",
+      "title": "My First Blog Post",
+      "file": "first-post.md",
+      "date": "2024-03-01"
+    },
+    {
+      "slug": "second-post",
+      "title": "Exploring AI",
+      "file": "exploring-ai.md",
+      "date": "2024-03-05"
+    }
+  ]
+  

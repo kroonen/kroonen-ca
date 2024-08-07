@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Robin Kroonen's personal website featuring Conway's Game of Life">
-    <title>Robin Kroonen | Game of Life</title>
+    <meta name="description" content="Robin Kroonen's Blog">
+    <title>Robin Kroonen | Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -14,28 +14,21 @@
         <div class="menu-items">
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
-            <a href="projects.html">Gallery</a>
+            <a href="projects.html">Projects</a>
             <a href="https://github.com/kroonen" target="_blank">GitHub</a>
             <a href="https://huggingface.co/kroonen" target="_blank">Hugging Face</a>
         </div>
     </div>
-    
+
     <div class="container">
-        <h1>Robin Kroonen</h1>
-        <h2>Project Gallery</h2>
-        <div id="projectGallery" class="gallery"></div>
+        <h1>Rob's posts</h1>
+        <div id="blog-list"></div>
+        <div id="blog-content"></div>
         <div id="copyright"></div>
     </div>
 
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="imageCaption"></div>
-    </div>
-
-    <script src="scripts/ui.js"></script>
-    <script src="scripts/gallery.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="scripts/blog.js"></script>
     <script src="scripts/global-ui.js"></script>
 </body>
 </html>

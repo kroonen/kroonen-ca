@@ -65,6 +65,7 @@ button:disabled {
 }
 input[type="range"] {
     -webkit-appearance: none;
+    appearance: none;
     width: 200px;
     height: 5px;
     background: var(--accent-color);
@@ -263,4 +264,45 @@ input[type="range"]::-moz-range-thumb {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Blog styles */
+#blog-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#blog-list li {
+    margin-bottom: 10px;
+}
+
+#blog-list a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#blog-list a:hover {
+    color: var(--life-color);
+}
+
+#blog-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#blog-content h1, #blog-content h2, #blog-content h3 {
+    color: var(--accent-color);
+}
+
+#blog-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+#blog-content code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
 }
