@@ -6,6 +6,9 @@ Welcome to the repository of my personal website! This site serves as a hub for 
 
 I'm Robin Kroonen, a passionate System Engineer with a keen interest in Computer Science and Artificial Intelligence. This website is where I share my journey, projects, and insights into the world of technology and beyond.
 
+
+(has to be updated...)
+
 ## Website Features
 
 - **Game of Life Simulation**: An interactive implementation of Conway's Game of Life, showcasing my interest in cellular automata and complex systems.
