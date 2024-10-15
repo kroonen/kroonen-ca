@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyrightElement = document.getElementById('copyright');
     if (copyrightElement) {
         const year = new Date().getFullYear();
-        copyrightElement.textContent = `© ${year} Robin Kroonen`;
+        copyrightElement.innerHTML = `© ${year} Robin Kroonen | A core initiative of <a href="https://www.kroonen.ai" target="_blank" rel="noopener noreferrer">Kroonen.ai</a>, dedicated to advancing AI-driven creativity and computational research.`;
     }
 });
